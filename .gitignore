@@ -1,0 +1,20 @@
+# Database SQLite - berisi data transaksi asli, jangan ikut di-commit
+database/wms.sqlite
+database/wms.sqlite-shm
+database/wms.sqlite-wal
+database/wms.sqlite-journal
+
+# File instalasi - boleh tetap ada di repo untuk memudahkan setup ulang,
+# tapi HAPUS dari server production setelah akun admin pertama dibuat.
+# Jika ingin ikut mengabaikannya dari Git juga, uncomment baris di bawah:
+# install.php
+
+# File sistem operasi / editor
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# Dependensi jika suatu saat pakai composer
+/vendor/
