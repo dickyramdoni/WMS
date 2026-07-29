@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Redirecting...</title>
+    <script>
+        // Contoh menggunakan JavaScript
+        window.location.href = '<?php echo isLoggedIn() ? APP_URL . '/dashboard.php' : APP_URL . '/login.php'; ?>';
+    </script>
+</head>
+<body>
+    Redirecting...
+</body>
+</html>
