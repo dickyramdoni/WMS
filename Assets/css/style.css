@@ -1,0 +1,128 @@
+:root {
+    --wms-primary: #1e5f74;
+    --wms-primary-dark: #133b46;
+    --wms-accent: #f2a541;
+    --wms-sidebar-w: 250px;
+}
+
+body {
+    background-color: #f4f6f8;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+.navbar-top {
+    background-color: var(--wms-primary-dark);
+    height: 56px;
+}
+
+.wms-wrapper {
+    display: flex;
+    min-height: calc(100vh - 56px);
+}
+
+.wms-sidebar {
+    width: var(--wms-sidebar-w);
+    background-color: var(--wms-primary);
+    flex-shrink: 0;
+    padding-top: 12px;
+    min-height: calc(100vh - 56px);
+}
+
+.wms-sidebar .nav-header {
+    color: #cfe3e8;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    padding: 14px 20px 4px;
+    font-weight: 600;
+}
+
+.wms-sidebar .nav-link {
+    color: #e6f1f4;
+    padding: 9px 20px;
+    font-size: 0.92rem;
+    border-left: 3px solid transparent;
+}
+
+.wms-sidebar .nav-link i {
+    width: 20px;
+    display: inline-block;
+}
+
+.wms-sidebar .nav-link:hover {
+    background-color: rgba(255,255,255,0.08);
+    color: #fff;
+}
+
+.wms-sidebar .nav-link.active {
+    background-color: rgba(255,255,255,0.14);
+    border-left-color: var(--wms-accent);
+    color: #fff;
+    font-weight: 600;
+}
+
+.wms-content {
+    flex-grow: 1;
+    padding: 24px;
+    max-width: calc(100% - var(--wms-sidebar-w));
+}
+
+.card-stat {
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.card-stat .icon {
+    font-size: 2.2rem;
+    opacity: 0.85;
+}
+
+.bg-stat-1 { background: linear-gradient(135deg, #1e5f74, #133b46); }
+.bg-stat-2 { background: linear-gradient(135deg, #2e8b57, #1f5f3d); }
+.bg-stat-3 { background: linear-gradient(135deg, #d97706, #92500a); }
+.bg-stat-4 { background: linear-gradient(135deg, #b91c1c, #7f1414); }
+
+.table thead {
+    background-color: #eef2f5;
+}
+
+.badge-status-draft { background-color: #6c757d; }
+.badge-status-ordered { background-color: #0d6efd; }
+.badge-status-partial { background-color: #f2a541; color:#000; }
+.badge-status-received, .badge-status-shipped { background-color: #198754; }
+.badge-status-picking { background-color: #0dcaf0; color:#000; }
+.badge-status-cancelled { background-color: #dc3545; }
+
+@media (max-width: 991.98px) {
+    .wms-sidebar {
+        position: fixed;
+        left: -260px;
+        top: 56px;
+        z-index: 1030;
+        transition: left 0.2s ease;
+        box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+    }
+    .wms-sidebar.show {
+        left: 0;
+    }
+    .wms-content {
+        max-width: 100%;
+    }
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #1e5f74, #133b46);
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    border: none;
+    border-radius: 14px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+}
