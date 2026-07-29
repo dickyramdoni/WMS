@@ -3,7 +3,7 @@
 // Konfigurasi Aplikasi - WMS
 // ============================================
 define('APP_NAME', 'Warehouse Management System');
-define('APP_URL', 'http://localhost/wms'); // sesuaikan dengan folder instalasi
+define('APP_URL', 'https://dickyramdoni.github.io/WMS/'); // sesuaikan dengan folder instalasi
 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
